@@ -14,6 +14,9 @@
         echo "<pre>";
         print_r ($_SERVER);
         echo "</pre>";
+
+        $ip = $_SERVER['SERVER_ADDR'];
+        echo $sql="INSERT INTO table ('ip_address') Values ('$ip')";
     ?>
 
 </body>
