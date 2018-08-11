@@ -2,7 +2,7 @@
 if(isset($_POST['btnUpload'])) {
     // Array ( [myFile] => Array ( [name] => upload.xlsx [type] => application/vnd.openxmlformats-officedocument.spreadsheetml.sheet [tmp_name] => C:\xampp\tmp\php7CE2.tmp [error] => 0 [size] => 8040 ) )
     
-    if ($_FILES['myfile']['size'] < 100000) {
+    if ($_FILES['myFile']['size'] < 100000) {
         $filename = md5(date('Ymdhis')).'_'.$_FILES['myFile']['name'];
         move_uploaded_file($_FILES['myFile']['tmp_name'],"./uploads/{$filename}");
     }else {
@@ -29,5 +29,19 @@ if(isset($_POST['btnUpload'])) {
         <input type="file" name="myFile" required><br>
         <button type="submit" name="btnUpload">Upload my file </button>
     </form>
+
+    <h3>All Photos</h3>
+    <?php
+    $dir = opendir("./uploads");
+
+    while($filename = readdir($dir)) {
+        if($filename != "." and $filename != ".."){
+            echo "<img src='./uploads/$filename' width='100%' height='auto' <br>";
+        }
+    }
+
+    closedir($dir);
+    ?>
+
 </body>
 </html>
