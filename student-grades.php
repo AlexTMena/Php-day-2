@@ -1,4 +1,5 @@
 <?php include "ComputeGrades.php"; ?>
+<?php include  "House.php"; ?>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,7 +13,13 @@
 
     <?php
     //objectcreation
-    $alex = new ComputeGrades(80,99,98,77);
+    //$alex = new ComputeGrades(80,99,98,77);
+
+    $house1 = new House();
+    echo $house1->wallColor
+
+
+    $house2 = new SmallHouse();
 
     ?>
     
