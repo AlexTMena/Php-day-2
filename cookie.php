@@ -14,6 +14,7 @@
     $_GET       =   get information from URL variable
     $_FILES     =   get infomation from the uploaded file
     $_COOKIE    =   we are placing information in the computer of the client. 
+    $_SESSION   =   information is available if session is active
 -->
 
     <h1>Cookie</h1>

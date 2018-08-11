@@ -1,9 +1,14 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: auto;
 }
 
 .output {
     border: solid 1px #333;
     width: 50px;
     margin: 10px;
+}
+
+.container {
+    margin: auto !important;
 }
